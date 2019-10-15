@@ -4,6 +4,26 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+function favAnimals(animalType) {
+  const food = "cat food";
+  const activity = "sleep";
+  
+  function secondFavAnimals(secondAnimalType) {
+    const dogFood = "dog food";
+    const dogActivity = "fetch";
+
+    function thirdFavAnimals(thirdFavAnimalType) {
+      const tigerFood = "meat";
+      const tigerActivity = "hunt";
+      console.log(`My first favorite animal is a ${animalType}, followed by a ${secondAnimalType}, and then a ${thirdFavAnimalType} A ${animalType} likes to eat ${food} and ${activity}.`)
+    } // this ends thirdFavAnimalType function
+    thirdFavAnimals("tiger");
+  } // this ends secondFavAnimals function
+  secondFavAnimals("dog");
+} // this ends favAnimals function
+favAnimals("cat");
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
